@@ -1,6 +1,7 @@
 site_name: Quartile API LLC
 site_description: Open API Quartile
-site_url: https://developer.quartile.com
+site_url: 'https://developer.quartile.com'
+theme:
   name: material
   #custom_dir: overrides
   font:

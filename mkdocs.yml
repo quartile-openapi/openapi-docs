@@ -1,7 +1,6 @@
 site_name: Quartile API LLC
 site_description: Open API Quartile
-site_url: https://carlos-rian-quartile.github.io/
-theme:
+site_url: https://developer.quartile.com
   name: material
   #custom_dir: overrides
   font:
@@ -33,7 +32,7 @@ theme:
   favicon: img/favicon.ico
   language: en
 repo_name: 'Quartile API Doc'
-repo_url: 'https://github.com/carlos-rian-quartile/quartile-api-documentation'
+repo_url: 'https://github.com/quartile-openapi/openapi-docs'
 edit_uri: ''
 plugins:
   - search

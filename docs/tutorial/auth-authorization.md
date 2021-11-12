@@ -28,11 +28,13 @@ After login, to to the "profile" page. You will see a "Generate Token" button, c
 
 ### Step 2. Endpoints **authorization**, **refresh** and **validate**
 
-Although the "Authorization" url is available, you don't need to use it because you will use the dev portal to generate a new set of tokens. With the generated tokens you can make API calls and request new tokens through the refresh endpoint.
+Although the "Authorization" url is available, you don't need to use it because you will use the dev portal to generate a new set of tokens. With the generated tokens you can make API calls and request new tokens through the refresh endpoint. 
+
+Access: [OAuth API](https://developer.quartile.com/api-details#api=auth) 
 
 
 | __Method__ | __Type__ | __URL__ | __Description__ |
 | :------------- |:------------- | :------------- | :------------- |
 | `GET` | Authorization | :material-close: /auth/v1/token?code={code} | The authorize token, normally the user with a customer profile does not have access to this data. If this is the case, you can obtain new tokens in the Tokens - *Developer Portal > Profile*.  |
-| `POST` | Refresh | :material-check: /auth/v1/refresh-token | You need to enter the update token. If you do not have this data, "log in" again on the portal and request a new set of tokens (authorization token and refresh token) |
-| `POST` | Validade | :material-check: /auth/v1/validate-token | You can verify that the authorization token is valid. |
+| `POST` | Refresh | :material-check: /auth/v1/refresh-token | You need to enter the update token. If you do not have this data, "log in" again on the portal and request a new set of tokens (authorization token and refresh token).|
+| `POST` | Validade | :material-check: /auth/v1/validate-token | You can verify that the authorization token is valid.|

@@ -1043,6 +1043,327 @@
                 }
             }
         },
+        "/amazon/v1/process/masterlist": {
+            "get": {
+                "tags": [
+                    "Amazon - Process"
+                ],
+                "summary": "Get Masterlist",
+                "operationId": "get_masterlist_amazon_v1_process_masterlist_get",
+                "parameters": [
+                    {
+                        "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc.",
+                        "required": true,
+                        "schema": {
+                            "title": "Ocp-Apim-Subscription-Key",
+                            "maxLength": 32,
+                            "minLength": 32,
+                            "type": "string",
+                            "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc."
+                        },
+                        "name": "Ocp-Apim-Subscription-Key",
+                        "in": "header"
+                    },
+                    {
+                        "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access.",
+                        "required": true,
+                        "schema": {
+                            "title": "Authorization",
+                            "pattern": "(^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)|(^[B-b]earer\\s[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)",
+                            "type": "string",
+                            "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access."
+                        },
+                        "name": "Authorization",
+                        "in": "header"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Response Get Masterlist Amazon V1 Process Masterlist Get",
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/BaseMasterList"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized. Access token or subscriber key is missing or invalid.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnauthorizedToken"
+                                }
+                            }
+                        }
+                    },
+                    "204": {
+                        "description": "No content."
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Amazon - Process"
+                ],
+                "summary": "Put Masterlist",
+                "operationId": "put_masterlist_amazon_v1_process_masterlist_put",
+                "parameters": [
+                    {
+                        "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc.",
+                        "required": true,
+                        "schema": {
+                            "title": "Ocp-Apim-Subscription-Key",
+                            "maxLength": 32,
+                            "minLength": 32,
+                            "type": "string",
+                            "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc."
+                        },
+                        "name": "Ocp-Apim-Subscription-Key",
+                        "in": "header"
+                    },
+                    {
+                        "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access.",
+                        "required": true,
+                        "schema": {
+                            "title": "Authorization",
+                            "pattern": "(^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)|(^[B-b]earer\\s[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)",
+                            "type": "string",
+                            "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access."
+                        },
+                        "name": "Authorization",
+                        "in": "header"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BaseMasterListUpdate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized. Access token or subscriber key is missing or invalid.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnauthorizedToken"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Amazon - Process"
+                ],
+                "summary": "Post Masterlist",
+                "operationId": "post_masterlist_amazon_v1_process_masterlist_post",
+                "parameters": [
+                    {
+                        "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc.",
+                        "required": true,
+                        "schema": {
+                            "title": "Ocp-Apim-Subscription-Key",
+                            "maxLength": 32,
+                            "minLength": 32,
+                            "type": "string",
+                            "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc."
+                        },
+                        "name": "Ocp-Apim-Subscription-Key",
+                        "in": "header"
+                    },
+                    {
+                        "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access.",
+                        "required": true,
+                        "schema": {
+                            "title": "Authorization",
+                            "pattern": "(^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)|(^[B-b]earer\\s[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)",
+                            "type": "string",
+                            "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access."
+                        },
+                        "name": "Authorization",
+                        "in": "header"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BaseMasterListInsert"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BaseMasterList"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized. Access token or subscriber key is missing or invalid.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnauthorizedToken"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Message"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Amazon - Process"
+                ],
+                "summary": "Delete Masterlist",
+                "operationId": "delete_masterlist_amazon_v1_process_masterlist_delete",
+                "parameters": [
+                    {
+                        "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc.",
+                        "required": true,
+                        "schema": {
+                            "title": "Ocp-Apim-Subscription-Key",
+                            "maxLength": 32,
+                            "minLength": 32,
+                            "type": "string",
+                            "description": "The subscriber is used to do all access control on the API, for example: control of requests, reports, limits and access products, etc."
+                        },
+                        "name": "Ocp-Apim-Subscription-Key",
+                        "in": "header"
+                    },
+                    {
+                        "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access.",
+                        "required": true,
+                        "schema": {
+                            "title": "Authorization",
+                            "pattern": "(^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)|(^[B-b]earer\\s[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+\\/=]*$)",
+                            "type": "string",
+                            "description": "The authorization token is used to validate your identity in Quartile LLC, only Quartile accounts can have API access."
+                        },
+                        "name": "Authorization",
+                        "in": "header"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BaseMasterListDelete"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BaseMasterList"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized. Access token or subscriber key is missing or invalid.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UnauthorizedToken"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Message"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/amazon/v1/parameters/products": {
             "get": {
                 "tags": [
@@ -2097,7 +2418,7 @@
                     "Amazon - Products"
                 ],
                 "summary": "Post Info",
-                "description": "Endpoint able to separate all ASINs into different groups, inputting further information relevant to your report.<br>• Having more information to compare, analyze and take important decisions for your business will help you compare multiple products and understand what is bringing you results and what is not ",
+                "description": "Endpoint able to separate all ASINs into different groups, inputting further information relevant to your report.<br>• Having more information to compare, analyze and take important decisions for your business will help you compare multiple products and understand what is bringing you results and what is not.",
                 "operationId": "post_info_amazon_v1_products_info_post",
                 "parameters": [
                     {
@@ -2711,6 +3032,54 @@
                     }
                 }
             },
+            "BaseCampaignsStatus": {
+                "title": "BaseCampaignsStatus",
+                "required": [
+                    "budget",
+                    "status",
+                    "sellerId"
+                ],
+                "type": "object",
+                "properties": {
+                    "asin": {
+                        "title": "Asin",
+                        "type": "string"
+                    },
+                    "sku": {
+                        "title": "Sku",
+                        "type": "string"
+                    },
+                    "budget": {
+                        "title": "Budget",
+                        "type": "number"
+                    },
+                    "keywordText": {
+                        "title": "Keywordtext",
+                        "type": "string"
+                    },
+                    "targetASIN": {
+                        "title": "Targetasin",
+                        "type": "string"
+                    },
+                    "status": {
+                        "$ref": "#/components/schemas/EnumStatus"
+                    },
+                    "queuedDate": {
+                        "title": "Queueddate",
+                        "type": "string"
+                    },
+                    "finishedDate": {
+                        "title": "Finisheddate",
+                        "type": "string"
+                    },
+                    "sellerId": {
+                        "title": "Sellerid",
+                        "maxLength": 30,
+                        "minLength": 10,
+                        "type": "string"
+                    }
+                }
+            },
             "BaseCampaignsStatusInsert": {
                 "title": "BaseCampaignsStatusInsert",
                 "required": [
@@ -2758,6 +3127,113 @@
                     }
                 }
             },
+            "BaseMasterList": {
+                "title": "BaseMasterList",
+                "required": [
+                    "id",
+                    "asin",
+                    "countryCode",
+                    "percACoS"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "Id",
+                        "type": "string",
+                        "description": "Unique identifier.",
+                        "format": "uuid"
+                    },
+                    "asin": {
+                        "title": "Asin",
+                        "minLength": 3,
+                        "type": "string",
+                        "description": "Asin id on amazon"
+                    },
+                    "countryCode": {
+                        "$ref": "#/components/schemas/EnumCountryCode"
+                    },
+                    "percACoS": {
+                        "title": "Percacos",
+                        "minimum": 1.0,
+                        "type": "number",
+                        "description": "Setting an ACoS% at a (campaign or product) level."
+                    }
+                }
+            },
+            "BaseMasterListDelete": {
+                "title": "BaseMasterListDelete",
+                "required": [
+                    "id"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "Id",
+                        "type": "string",
+                        "description": "Unique identifier.",
+                        "format": "uuid"
+                    }
+                }
+            },
+            "BaseMasterListInsert": {
+                "title": "BaseMasterListInsert",
+                "required": [
+                    "asin",
+                    "percACoS",
+                    "countryCode"
+                ],
+                "type": "object",
+                "properties": {
+                    "asin": {
+                        "title": "Asin",
+                        "minLength": 3,
+                        "type": "string",
+                        "description": "Asin id on amazon"
+                    },
+                    "percACoS": {
+                        "title": "Percacos",
+                        "minimum": 1.0,
+                        "type": "number",
+                        "description": "Setting an ACoS% at a (campaign or product) level."
+                    },
+                    "countryCode": {
+                        "$ref": "#/components/schemas/EnumCountryCode"
+                    }
+                }
+            },
+            "BaseMasterListUpdate": {
+                "title": "BaseMasterListUpdate",
+                "required": [
+                    "asin",
+                    "percACoS",
+                    "countryCode",
+                    "id"
+                ],
+                "type": "object",
+                "properties": {
+                    "asin": {
+                        "title": "Asin",
+                        "minLength": 3,
+                        "type": "string",
+                        "description": "Asin id on amazon"
+                    },
+                    "percACoS": {
+                        "title": "Percacos",
+                        "minimum": 1.0,
+                        "type": "number",
+                        "description": "Setting an ACoS% at a (campaign or product) level."
+                    },
+                    "countryCode": {
+                        "$ref": "#/components/schemas/EnumCountryCode"
+                    },
+                    "id": {
+                        "title": "Id",
+                        "type": "string",
+                        "description": "Unique identifier.",
+                        "format": "uuid"
+                    }
+                }
+            },
             "BaseModelACoSCampaigns": {
                 "title": "BaseModelACoSCampaigns",
                 "required": [
@@ -2771,18 +3247,18 @@
                     "percACoS": {
                         "title": "Percacos",
                         "type": "number",
-                        "description": "Setting an ACoS% at a product level."
+                        "description": "Setting an ACoS% at a (campaign or product) level."
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     },
                     "id": {
                         "title": "Id",
                         "type": "string",
-                        "description": "Unique identifier",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "campaignNameNV": {
@@ -2817,18 +3293,18 @@
                     "percACoS": {
                         "title": "Percacos",
                         "type": "number",
-                        "description": "Setting an ACoS% at a product level."
+                        "description": "Setting an ACoS% at a (campaign or product) level."
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     },
                     "id": {
                         "title": "Id",
                         "type": "string",
-                        "description": "Unique identifier",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "asin": {
@@ -3169,7 +3645,7 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
-                        "description": "Unique identifier",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     }
                 }
@@ -3185,14 +3661,14 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
-                        "description": "Unique identifier",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     }
                 }
             },
@@ -3226,7 +3702,7 @@
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     }
                 }
             },
@@ -3260,14 +3736,14 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
-                        "description": "Unique identifier",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     }
                 }
             },
@@ -3446,6 +3922,7 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     }
                 }
@@ -3542,6 +4019,7 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     }
                 }
@@ -3618,11 +4096,13 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "label": {
                         "title": "Label",
-                        "type": "string"
+                        "type": "string",
+                        "description": "Tag name"
                     },
                     "sequence": {
                         "title": "Sequence",
@@ -3643,7 +4123,7 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
-                        "description": "Unique identifier",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "label": {
@@ -3655,7 +4135,7 @@
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     }
                 }
             },
@@ -3672,17 +4152,19 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "label": {
                         "title": "Label",
-                        "type": "string"
+                        "type": "string",
+                        "description": "Tag name"
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     },
                     "action": {
                         "$ref": "#/components/schemas/ModelEnumStatus"
@@ -3786,54 +4268,6 @@
                     }
                 }
             },
-            "BaseCampaignsStatus": {
-                "title": "BaseCampaignsStatus",
-                "required": [
-                    "budget",
-                    "status",
-                    "sellerId"
-                ],
-                "type": "object",
-                "properties": {
-                    "asin": {
-                        "title": "Asin",
-                        "type": "string"
-                    },
-                    "sku": {
-                        "title": "Sku",
-                        "type": "string"
-                    },
-                    "budget": {
-                        "title": "Budget",
-                        "type": "number"
-                    },
-                    "keywordText": {
-                        "title": "Keywordtext",
-                        "type": "string"
-                    },
-                    "targetASIN": {
-                        "title": "Targetasin",
-                        "type": "string"
-                    },
-                    "status": {
-                        "$ref": "#/components/schemas/EnumStatus"
-                    },
-                    "queuedDate": {
-                        "title": "Queueddate",
-                        "type": "string"
-                    },
-                    "finishedDate": {
-                        "title": "Finisheddate",
-                        "type": "string"
-                    },
-                    "sellerId": {
-                        "title": "Sellerid",
-                        "maxLength": 30,
-                        "minLength": 10,
-                        "type": "string"
-                    }
-                }
-            },
             "DefaultError": {
                 "title": "DefaultError",
                 "required": [
@@ -3846,6 +4280,30 @@
                     }
                 },
                 "description": "Mapping default error."
+            },
+            "EnumCountryCode": {
+                "title": "EnumCountryCode",
+                "enum": [
+                    "AE",
+                    "AU",
+                    "BR",
+                    "CA",
+                    "DE",
+                    "ES",
+                    "FR",
+                    "GB",
+                    "IN",
+                    "IT",
+                    "JP",
+                    "MX",
+                    "NL",
+                    "PL",
+                    "SA",
+                    "SE",
+                    "SG",
+                    "US"
+                ],
+                "description": "An enumeration."
             },
             "EnumStatus": {
                 "title": "EnumStatus",
@@ -3935,13 +4393,13 @@
                     "percACoS": {
                         "title": "Percacos",
                         "type": "number",
-                        "description": "Setting an ACoS% at a product level."
+                        "description": "Setting an ACoS% at a (campaign or product) level."
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     },
                     "campaignNameNV": {
                         "title": "Campaignnamenv",
@@ -3962,13 +4420,13 @@
                     "percACoS": {
                         "title": "Percacos",
                         "type": "number",
-                        "description": "Setting an ACoS% at a product level."
+                        "description": "Setting an ACoS% at a (campaign or product) level."
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     },
                     "asin": {
                         "title": "Asin",
@@ -3988,14 +4446,14 @@
                     "id": {
                         "title": "Id",
                         "type": "string",
-                        "description": "Unique identifier",
+                        "description": "Unique identifier.",
                         "format": "uuid"
                     },
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
                         "type": "integer",
-                        "description": "The identifier of a profile associated with the advertiser account."
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     }
                 }
             },
@@ -4041,7 +4499,8 @@
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     },
                     "shipping": {
                         "title": "Shipping",
@@ -4072,7 +4531,8 @@
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     }
                 }
             },
@@ -4109,7 +4569,8 @@
                     "profileId": {
                         "title": "Profileid",
                         "minimum": 1.0,
-                        "type": "integer"
+                        "type": "integer",
+                        "description": "The identifier of a profile associated with the advertiser account. If not you have this data, use GET method on \"accounts\" resource to list profiles associated with the access token passed in the HTTP Authorization header."
                     },
                     "shipping": {
                         "title": "Shipping",

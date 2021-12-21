@@ -925,7 +925,7 @@
                                     "title": "Response Get Campaignsstatus Amazon V1 Process Campaignsstatus Get",
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#/components/schemas/BaseProcess"
+                                        "$ref": "#/components/schemas/BaseCampaignsStatus"
                                     }
                                 }
                             }
@@ -993,7 +993,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/BaseCampaignInsert"
+                                "$ref": "#/components/schemas/BaseCampaignsStatusInsert"
                             }
                         }
                     },
@@ -2711,8 +2711,8 @@
                     }
                 }
             },
-            "BaseCampaignInsert": {
-                "title": "BaseCampaignInsert",
+            "BaseCampaignsStatusInsert": {
+                "title": "BaseCampaignsStatusInsert",
                 "required": [
                     "profileId",
                     "campaignActionId",
@@ -3786,8 +3786,8 @@
                     }
                 }
             },
-            "BaseProcess": {
-                "title": "BaseProcess",
+            "BaseCampaignsStatus": {
+                "title": "BaseCampaignsStatus",
                 "required": [
                     "budget",
                     "status",

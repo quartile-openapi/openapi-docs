@@ -49,6 +49,8 @@ nav:
     - Start - Fist Access: tutorial/auth-first_access.md
     - Create Subscriber: tutorial/auth-subscriber.md
     - Create Authorization: tutorial/auth-authorization.md
+    - Handling With Refresh Token: tutorial/auth-refresh-token.md
+    - About Tokens: tutorial/auth-refresh-token-details.md
   
   - API:
     - Call the API through the portal: tutorial/portal-api.md

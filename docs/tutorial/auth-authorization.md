@@ -6,7 +6,13 @@ By default you need to create a set of tokens. In this set of tokens, you will r
 
 * __Refresh Token:__ Use this token to request a new set of tokens. Token expires in 14 days after being created.
 
+!!! warning "Warning :material-refresh: Refresh token"
+    When the access token expires and you request a new set of tokens,
+    the refresh token will also be updated! **So always save the last refresh token**,
+    so you won't have any problems. The refresh token may expire or be disabled when
+    you request a new set of tokens!
 
+    You can learn how to deal with this "problem" in the session: [Handling With Refresh Token](/tutorial/auth-dandling-with-refresh-token)
 
 ### Step 1. Access Profile
 

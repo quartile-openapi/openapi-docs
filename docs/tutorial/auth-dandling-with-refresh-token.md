@@ -387,7 +387,7 @@ python access_token_consumer.py
 
 *Complete file*
 
-=== ":fontawesome-brands-python: refresh_token_worker.py"
+=== ":fontawesome-brands-python: access_token_consumer.py"
 
 ```python
 from time import sleep

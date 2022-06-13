@@ -66,7 +66,7 @@
                     "Authorization"
                 ],
                 "summary": "Refresh Token",
-                "description": "- **Body**: You need to enter the update token. If you do not have this data, \"log in\" again on the portal and request a new set of tokens (authorization_token and refresh_token).",
+                "description": "- **Body**: You need to enter the refresh token.\nIf you do not have this data, \"log in\" again on the portal and request\na new set of tokens (authorization_token and refresh_token).\n\n- **Note**: When the access token expires and you request a new set of tokens,\nthe refresh token will also be updated! So always save the last refresh token,\nso you won't have any problems. The refresh token may expire or be disabled when\nyou request a new set of tokens.",
                 "operationId": "refresh_token_auth_v1_refresh_token_post",
                 "requestBody": {
                     "content": {
@@ -1049,6 +1049,7 @@
                     "Amazon - Process"
                 ],
                 "summary": "Get Masterlist",
+                "description": "Returns a list of products with a target ACoS set for a country",
                 "operationId": "get_masterlist_amazon_v1_process_masterlist_get",
                 "parameters": [
                     {
@@ -1122,6 +1123,7 @@
                     "Amazon - Process"
                 ],
                 "summary": "Put Masterlist",
+                "description": "Modifies an existing ASIN - Country - Target ACoS entry",
                 "operationId": "put_masterlist_amazon_v1_process_masterlist_put",
                 "parameters": [
                     {
@@ -1165,7 +1167,9 @@
                         "description": "Successful Response",
                         "content": {
                             "application/json": {
-                                "schema": {}
+                                "schema": {
+                                    "$ref": "#/components/schemas/BaseMasterList"
+                                }
                             }
                         }
                     },
@@ -1196,6 +1200,7 @@
                     "Amazon - Process"
                 ],
                 "summary": "Post Masterlist",
+                "description": "Creates a target ACoS entry for a specific ASIN in a specific country across all the tenant's accounts. With this set, the system will try to take the ASIN to the specified target ACoS in the specified country, ignoring the account level ACoS.",
                 "operationId": "post_masterlist_amazon_v1_process_masterlist_post",
                 "parameters": [
                     {
@@ -1282,6 +1287,7 @@
                     "Amazon - Process"
                 ],
                 "summary": "Delete Masterlist",
+                "description": "Removes an existing entry. This way the system will go back to its default behavior and target the account level ACoS during optimization.",
                 "operationId": "delete_masterlist_amazon_v1_process_masterlist_delete",
                 "parameters": [
                     {
@@ -2418,7 +2424,7 @@
                     "Amazon - Products"
                 ],
                 "summary": "Post Info",
-                "description": "Endpoint able to separate all ASINs into different groups, inputting further information relevant to your report.<br>• Having more information to compare, analyze and take important decisions for your business will help you compare multiple products and understand what is bringing you results and what is not.",
+                "description": "Endpoint able to separate all ASINs into different groups, inputting further information relevant to your report. <br>• Having more information to compare, analyze and take important decisions for your business will help you compare multiple products and understand what is bringing you results and what is not.",
                 "operationId": "post_info_amazon_v1_products_info_post",
                 "parameters": [
                     {
@@ -2594,6 +2600,7 @@
                     "Amazon - Products"
                 ],
                 "summary": "Get Inboundinventory",
+                "description": "This endpoint serves to list to inform the inventory position by date already registered.",
                 "operationId": "get_inboundinventory_amazon_v1_products_inboundinventory_get",
                 "parameters": [
                     {
@@ -2679,6 +2686,7 @@
                     "Amazon - Products"
                 ],
                 "summary": "Put Inboundinventory",
+                "description": "This endpoint is used to edit inform the inventory position by date.",
                 "operationId": "put_inboundinventory_amazon_v1_products_inboundinventory_put",
                 "parameters": [
                     {
@@ -2765,6 +2773,7 @@
                     "Amazon - Products"
                 ],
                 "summary": "Post Inboundinventory",
+                "description": "This endpoint serves to add inform the inventory position by date.",
                 "operationId": "post_inboundinventory_amazon_v1_products_inboundinventory_post",
                 "parameters": [
                     {
@@ -2851,6 +2860,7 @@
                     "Amazon - Products"
                 ],
                 "summary": "Delete Inboundinventory",
+                "description": "This endpoint is used to remove inform the inventory position by date.",
                 "operationId": "delete_inboundinventory_amazon_v1_products_inboundinventory_delete",
                 "parameters": [
                     {
@@ -3005,6 +3015,7 @@
                     "token",
                     "type",
                     "expires_in",
+                    "expires_at",
                     "not_before",
                     "note"
                 ],
@@ -3021,6 +3032,11 @@
                     "expires_in": {
                         "title": "Expires In",
                         "type": "integer"
+                    },
+                    "expires_at": {
+                        "title": "Expires At",
+                        "type": "string",
+                        "format": "date-time"
                     },
                     "not_before": {
                         "title": "Not Before",
@@ -3150,13 +3166,18 @@
                         "description": "Asin id on amazon"
                     },
                     "countryCode": {
-                        "$ref": "#/components/schemas/EnumCountryCode"
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/EnumCountryCode"
+                            }
+                        ],
+                        "description": "Country code: US, CA, MX, GB, DE, ES, IT, FR, SE, PL, NL, JP, AU, SG, AE, BR, IN, SA"
                     },
                     "percACoS": {
                         "title": "Percacos",
                         "minimum": 1.0,
                         "type": "number",
-                        "description": "Setting an ACoS% at a (campaign or product) level."
+                        "description": "ACoS% target per ASIN and Country"
                     }
                 }
             },
@@ -3194,10 +3215,15 @@
                         "title": "Percacos",
                         "minimum": 1.0,
                         "type": "number",
-                        "description": "Setting an ACoS% at a (campaign or product) level."
+                        "description": "ACoS% target per ASIN and Country"
                     },
                     "countryCode": {
-                        "$ref": "#/components/schemas/EnumCountryCode"
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/EnumCountryCode"
+                            }
+                        ],
+                        "description": "Country code: US, CA, MX, GB, DE, ES, IT, FR, SE, PL, NL, JP, AU, SG, AE, BR, IN, SA"
                     }
                 }
             },
@@ -3221,10 +3247,15 @@
                         "title": "Percacos",
                         "minimum": 1.0,
                         "type": "number",
-                        "description": "Setting an ACoS% at a (campaign or product) level."
+                        "description": "ACoS% target per ASIN and Country"
                     },
                     "countryCode": {
-                        "$ref": "#/components/schemas/EnumCountryCode"
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/EnumCountryCode"
+                            }
+                        ],
+                        "description": "Country code: US, CA, MX, GB, DE, ES, IT, FR, SE, PL, NL, JP, AU, SG, AE, BR, IN, SA"
                     },
                     "id": {
                         "title": "Id",
@@ -3634,13 +3665,13 @@
                     "date": {
                         "title": "Date",
                         "type": "string",
-                        "description": "Datetime in format 1952-06-17T23:22:08 YYYY-mm-ddTHH:MM:SS",
+                        "description": "Inventory date",
                         "format": "date-time"
                     },
                     "quantity": {
                         "title": "Quantity",
                         "type": "integer",
-                        "description": "Quantity in inventory."
+                        "description": "Inventory amount for asin"
                     },
                     "id": {
                         "title": "Id",
@@ -3690,13 +3721,13 @@
                     "date": {
                         "title": "Date",
                         "type": "string",
-                        "description": "Datetime in format 1952-06-17T23:22:08 YYYY-mm-ddTHH:MM:SS",
+                        "description": "Inventory date",
                         "format": "date-time"
                     },
                     "quantity": {
                         "title": "Quantity",
                         "type": "integer",
-                        "description": "Quantity in inventory."
+                        "description": "Inventory amount for asin"
                     },
                     "profileId": {
                         "title": "Profileid",
@@ -3725,13 +3756,13 @@
                     "date": {
                         "title": "Date",
                         "type": "string",
-                        "description": "Datetime in format 1952-06-17T23:22:08 YYYY-mm-ddTHH:MM:SS",
+                        "description": "Inventory date",
                         "format": "date-time"
                     },
                     "quantity": {
                         "title": "Quantity",
                         "type": "integer",
-                        "description": "Quantity in inventory."
+                        "description": "Inventory amount for asin"
                     },
                     "id": {
                         "title": "Id",
@@ -4595,6 +4626,7 @@
                 "required": [
                     "token",
                     "expires_in",
+                    "expires_at",
                     "note"
                 ],
                 "type": "object",
@@ -4606,6 +4638,11 @@
                     "expires_in": {
                         "title": "Expires In",
                         "type": "integer"
+                    },
+                    "expires_at": {
+                        "title": "Expires At",
+                        "type": "string",
+                        "format": "date-time"
                     },
                     "note": {
                         "title": "Note",

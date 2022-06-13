@@ -126,10 +126,9 @@ paths:
           - "- "Returns a list of productInformation configured for the account. "
 
         post:
-          - "Endpoint able to separate all ASINs into different groups, inputting further information relevant to your report. 
-            • Having more information to compare, analyze and take important decisions for your 
-            business will help you compare multiple products and understand what is bringing you 
-            results and what is not "
+          - "Endpoint able to separate all ASINs into different groups, inputting further information relevant to your report.
+            • Having more information to compare, analyze and take important decisions for your
+            business will help you compare multiple products and understand what is bringing you results and what is not."
 
         put:
           - "Edit a list of productInformation configured for the account "
@@ -183,26 +182,26 @@ paths:
 
       description:
         get:
-          - "TO DO"
+          - "This endpoint serves to list to inform the inventory position by date already registered."
 
         post:
-          - "TO DO"
+          - "This endpoint serves to add inform the inventory position by date."
 
         put:
-          - "TO DO"
+          - "This endpoint is used to edit inform the inventory position by date."
 
         delete: 
-          - "TO DO"
+          - "This endpoint is used to remove inform the inventory position by date."
       fields:
         quantity:
           type: integer
-          description: "TO DO"
+          description: "Inventory amount for asin"
         asin:
           type: string
           description: "Asin id on amazon"
         date:
           type: string
-          description: "TO DO"
+          description: "Inventory date"
 
   /amazon/v1/process/campaignsstatus:
     portal-endpoint: 
@@ -315,5 +314,5 @@ paths:
           type: integer
           description: "ACoS% target per ASIN and Country"
         countryCode: 
-          type: integer
+          type: string
           description: "Country code: US, CA, MX, GB, DE, ES, IT, FR, SE, PL, NL, JP, AU, SG, AE, BR, IN, SA"

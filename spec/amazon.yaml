@@ -290,16 +290,19 @@ paths:
       
       description:
         get:
-          - "TO DO"
+          - "Returns a list of products with a target ACoS set for a country"
 
         post:
-          - "TO DO"
+          - "Creates a target ACoS entry for a specific ASIN in a specific country across all the tenant's accounts.
+            With this set, the system will try to take the ASIN to the specified target ACoS in the specified country,
+            ignoring the account level ACoS."
 
         put:
-          - "TO DO"
+          - "Modifies an existing ASIN - Country - Target ACoS entry"
 
         delete: 
-          - "TO DO"
+          - "Removes an existing entry. This way the system will go back to its default behavior and target the account
+            level ACoS during optimization."
 
       fields:
         id: 
@@ -310,7 +313,7 @@ paths:
           description: "Asin id on amazon."
         percACoS: 
           type: integer
-          description: "TO DO"
+          description: "ACoS% target per ASIN and Country"
         countryCode: 
           type: integer
-          description: "TO DO"
+          description: "Country code: US, CA, MX, GB, DE, ES, IT, FR, SE, PL, NL, JP, AU, SG, AE, BR, IN, SA"

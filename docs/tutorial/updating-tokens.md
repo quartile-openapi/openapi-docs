@@ -329,8 +329,8 @@ def main(max_sec: int = 3600 * 2):
 
 
         def get_new_refresh_token(refresh_token: str):
-            uri = "https://api.quartile.com/auth/v1/refresh-token"
-            body = {"refresh_token": refresh_token}
+            uri = "https://api.quartile.com/auth/v2/refresh-token"
+            body = {"token": refresh_token}
             resp = httpx.post(url=uri, json=body)
             assert resp.status_code == 201, resp.text
             data = resp.json()

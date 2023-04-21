@@ -6,7 +6,7 @@ authors = ["carlos.rian <carlos.rian@quartile.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.7"
 markdown-include = "^0.8.1"
 mkdocs-material = "^9.0.12"
 mkdocs-video = "^1.4.0"

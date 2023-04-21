@@ -8,8 +8,8 @@ from schema import AuthToken
 
 
 def get_new_refresh_token(refresh_token: str):
-    uri = "https://api.quartile.com/auth/v1/refresh-token"
-    body = {"refresh_token": refresh_token}
+    uri = "https://api.quartile.com/auth/v2/refresh"
+    body = {"token": refresh_token}
     resp = httpx.post(url=uri, json=body)
     assert resp.status_code == 201, resp.text
     data = resp.json()
@@ -58,4 +58,5 @@ def main(max_sec: int = 3600 * 2):
 
 
 if __name__ == "__main__":
+    print(("waiting for token update..."))
     main()

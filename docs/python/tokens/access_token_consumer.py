@@ -15,5 +15,6 @@ def get_access_token():
 
 
 if __name__ == "__main__":
+    print("getting token...")
     data = get_access_token()
     print(data)

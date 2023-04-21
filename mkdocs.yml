@@ -1,96 +1,130 @@
 site_name: Quartile API LLC
 site_description: Open API Quartile
-site_url: 'https://developer.quartile.com'
+site_url: "https://developer.quartile.com"
 theme:
   name: material
   #custom_dir: overrides
   font:
     code: Roboto Mono
   palette:
-  - scheme: default
-    primary: orange
-    accent: deep orange
-    toggle:
-      icon: material/lightbulb
-      name: Switch to dark mode
-  - scheme: slate
-    primary: orange
-    accent: deep orange
-    toggle:
-      icon: material/lightbulb-outline
-      name: Switch to light mode
+    - scheme: default
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
   features:
-  - search.suggest
-  - search.highlight
-  - search.share
-  - search.suggest
-  - navigation.expand
-  - navigation.top
-  - header.autohide
+    - search.suggest
+    - search.highlight
+    - search.share
+    - search.suggest
+
+    - navigation.indexes
+    - navigation.top
+
+    - navigation.tabs
+    - navigation.footer
+
+    - header.autohide
+
+    - content.code.copy
+    - content.code.annotate
+
   icon:
     repo: fontawesome/brands/github-alt
-  logo: img/icon-quartile.png
+  logo: img/logo3.jpg
   favicon: img/favicon.ico
   language: en
-repo_name: 'Quartile API Doc'
-repo_url: 'https://github.com/quartile-openapi/openapi-docs'
-edit_uri: ''
+
+repo_name: "Quartile API Doc"
+
+repo_url: "https://github.com/quartile-openapi/openapi-docs"
+
 plugins:
   - search
   - mkdocs-video:
       mark: "custom-marker"
 
-nav:
-- Home: index.md
-#- Instance Project: instance-project.md
-- Portal Tutorial:
-  - Subscriber and OAuth: 
-    - About: tutorial/auth-index.md
-    - Start - Fist Access: tutorial/auth-first_access.md
-    - Create Subscriber: tutorial/auth-subscriber.md
-    - Create Authorization: tutorial/auth-authorization.md
-    - Handling With Refresh Token: tutorial/auth-dandling-with-refresh-token.md
-    - About Tokens: tutorial/auth-refresh-token-details.md
-  
-  - API:
-    - Call the API through the portal: tutorial/portal-api.md
-    - Generate code for lang: tutorial/portal-api-code.md
-  
-  - OpenAPI: 
-    - Specification: tutorial/openapi-spec.md
-    - Postman: tutorial/openapi-postman.md
-  
+  - glightbox
+  - offline
 
-# - Amazon: 
-#  - Amazon Advertiser: amazon-index.md
-#  - Amazon DSP: amazondsp-index.md
-#- Google: 
-#  - Google: google-index.md
-#  - Google Merchant: googlemerchant-index.md
-#- Instacart: instacart-index.md
-#- Shopify: shopify-index.md
+nav:
+  - Home: index.md
+  - User Guide:
+      - Subscriber and OAuth:
+          - About: tutorial/index.md
+
+          - Intro - First Access: tutorial/intro.md
+
+          - Subscriber:
+              - Create: tutorial/auth-subscriber.md
+              - Subscription: tutorial/about-subscription.md
+
+          - OAuth2:
+              - Create:
+                  - v1(deprecated): tutorial/tokens-v1.md
+                  - v2: tutorial/tokens-v2.md
+              - Tokens: tutorial/about-tokens.md
+
+              - Updating tokens: tutorial/updating-tokens.md
+
+      - API:
+          - Dev portal: tutorial/portal-api.md
+          - Export example: tutorial/portal-api-code.md
+          - Batch processing: tutorial/batch-process.md
+
+      - OpenAPI:
+          - Specification: tutorial/openapi-spec.md
+          - Postman: tutorial/openapi-postman.md
+
+  - V2:
+      - Changes: changes-v1-to-v2.md
 
 markdown_extensions:
-- toc:
-    permalink: true
-- markdown.extensions.codehilite:
-    guess_lang: false
-- markdown_include.include:
-    base_path: docs
-- pymdownx.emoji:
-    emoji_index: !!python/name:materialx.emoji.twemoji
-    emoji_generator: !!python/name:materialx.emoji.to_svg
-- admonition
-- attr_list
-- codehilite
-- extra
-- pymdownx.tabbed
-- pymdownx.smartsymbols
-- pymdownx.superfences:
-    custom_fences:
-    - name: mermaid
-      class: mermaid
-      format: !!python/name:pymdownx.superfences.fence_div_format ''
+  - admonition
+  - attr_list
+  - md_in_html
+  - extra
+  - pymdownx.smartsymbols
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+
+  - toc:
+      permalink: true
+
+  - markdown.extensions.codehilite:
+      guess_lang: false
+
+  - markdown_include.include:
+      base_path: docs
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -98,16 +132,14 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/quartiledigital
     - icon: fontawesome/solid/globe
-      link: http://www.quartile.com/
-copyright: Copyright &copy; 2016 - 2020 Quartile LLC
+      link: https://www.quartile.com/
+
+copyright: Copyright &copy; 2016 - 2022 Quartile LLC
 
 extra_css:
-- css/termynal.css
-- css/custom.css
-- css/extras.css
+  - css/termynal.css
+  - css/custom.css
+
 extra_javascript:
-- https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-- js/termynal.js
-- js/custom.js
-- js/table.js
+  - js/termynal.js
+  - js/custom.js

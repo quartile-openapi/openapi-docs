@@ -17,7 +17,7 @@ In this new version, you can use the `/login` endpoint to log in and generate a 
     so you won't have any problems. The refresh token may expire or be disabled when
     you request a new set of tokens!
 
-    You can learn how to deal with this "problem" in the session: [Handling With Refresh Token](/tutorial/auth-dandling-with-refresh-token)
+    You can learn how to deal with this "problem" in the session: [Updating tokens](/tutorial/updating-tokens.html)
 ---
 
 !!! Danger "Deprecated :material-alert-circle:"
@@ -29,7 +29,7 @@ In this new version, you can use the `/login` endpoint to log in and generate a 
 After creating an account in the [Developer Portal](https://developer.quartile.com/signin), you can use the login endpoint to generate a new set of tokens.
 
 !!! info "Info :material-information-outline:"
-    The login endpoint is available from the [OAuth API](https://developer.quartile.com/api-details#api=auth) on the Developer Portal.
+    The login endpoint is available from the [OAuth API](https://developer.quartile.com/api-details#api=auth-v2) on the Developer Portal.
 
 Make a `POST` request to the login endpoint. Change the `<your@email.com>` and `<your_password>` with your email and password.
 Remember to use the same email and password you used to log in to your account in the Developer Portal.
@@ -63,7 +63,7 @@ If you have logged in correctly, a set of tokens will be generated.
 
 You can make API calls and request new tokens through the refresh endpoint with the generated tokens. 
 
-Access: [OAuth API](https://developer.quartile.com/api-details#api=auth) 
+Access: [OAuth API](https://developer.quartile.com/api-details#api=auth-v2) 
 
 
 | **Method** | **Type**   | **URL**                            | **Description** |

@@ -14,7 +14,7 @@ By default you need to create a set of tokens. In this set of tokens, you will r
     so you won't have any problems. The refresh token may expire or be disabled when
     you request a new set of tokens!
 
-    You can learn how to deal with this "problem" in the session: [Handling With Refresh Token](/tutorial/auth-dandling-with-refresh-token)
+    You can learn how to deal with this "problem" in the session: [Updating tokens](/tutorial/updating-tokens.html)
 ---
 
 ## **Access Profile**

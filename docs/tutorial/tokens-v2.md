@@ -39,6 +39,7 @@ Remember to use the same email and password you used to log in to your account i
 POST /auth/v2/login HTTP/1.1
 Host: api.quartile.com
 Content-Type: application/json
+Subscription-Key: <subscription_key>
 
 {
     "username": "<your@email.com>",

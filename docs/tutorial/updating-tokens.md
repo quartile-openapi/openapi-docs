@@ -66,7 +66,6 @@ The file structure is as follows:
 
 ## **Code**
 
-The code 
 
 ### **database.py**
 

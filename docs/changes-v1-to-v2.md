@@ -114,18 +114,19 @@ Path: `/amazon/{version}/process`
 
 Path: `/amazon/{version}/parameters`
 
-| Methods   | v1         | v2                   | Changed          | Endpoint         | Json(In/Out)     |
-|-----------|------------|----------------------|:----------------:|:----------------:|:----------------:|
-| `GET`     | /products  | /products/acos       | :material-check: | :material-check: | :material-close: |
-| `POST`    | /products  | /products/acos       | :material-check: | :material-check: | :material-close: |
-| `GET`     | ~          | /products/acos/{id}  | :material-close: | :material-close: | :material-close: |
-| `PUT`     | /products  | /products/acos/{id}  | :material-check: | :material-check: | :material-check: |
-| `DELETE`  | /products  | /products/acos/{id}  | :material-check: | :material-check: | :material-check: |
-| `GET`     | /campaigns | /campaigns/acos      | :material-check: | :material-check: | :material-close: |
-| `POST`    | /campaigns | /campaigns/acos      | :material-check: | :material-check: | :material-close: |
-| `GET`     | ~          | /campaigns/acos/{id} | :material-close: | :material-close: | :material-close: |
-| `PUT`     | /campaigns | /campaigns/acos/{id} | :material-check: | :material-check: | :material-check: |
-| `DELETE`  | /campaigns | /campaigns/acos/{id} | :material-check: | :material-check: | :material-check: |
+| Methods   | v1         | v2                       | Changed          | Endpoint         | Json(In/Out)     |
+|-----------|------------|--------------------------|:----------------:|:----------------:|:----------------:|
+| `GET`     | /products  | /products/acos           | :material-check: | :material-check: | :material-close: |
+| `POST`    | /products  | /products/acos           | :material-check: | :material-check: | :material-close: |
+| `GET`     | ~          | /products/acos/{id}      | :material-close: | :material-close: | :material-close: |
+| `PUT`     | /products  | /products/acos/{id}      | :material-check: | :material-check: | :material-check: |
+| `DELETE`  | /products  | /products/acos/{id}      | :material-check: | :material-check: | :material-check: |
+| `GET`     | ~          | /products/acos/history   | :material-close: | :material-close: | :material-close: |
+| `GET`     | /campaigns | /campaigns/acos          | :material-check: | :material-check: | :material-close: |
+| `POST`    | /campaigns | /campaigns/acos          | :material-check: | :material-check: | :material-close: |
+| `GET`     | ~          | /campaigns/acos/{id}     | :material-close: | :material-close: | :material-close: |
+| `PUT`     | /campaigns | /campaigns/acos/{id}     | :material-check: | :material-check: | :material-check: |
+| `DELETE`  | /campaigns | /campaigns/acos/{id}     | :material-check: | :material-check: | :material-check: |
 
 ---
 

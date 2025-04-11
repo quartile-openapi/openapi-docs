@@ -14,5 +14,6 @@ jobs:
       - run: pip install poetry
       - run: poetry self add poetry-plugin-export
       - run: python -m poetry export -f requirements.txt --output requirements.txt --without-hashes 
+      - run: sudo apt-get update && sudo apt-get install -y libxml2-dev libxslt1-dev python3-dev
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force

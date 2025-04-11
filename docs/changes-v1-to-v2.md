@@ -174,3 +174,21 @@ Path: `/amazon/{version}/unmanaged`
 | `GET`    | ~                | /campaigns/batch/{id}  | :material-close: | :material-close: | :material-close: |
 
 ---
+
+
+
+## **Walmart API**
+
+The Walmart API was released in the Quartile openapi v2.
+
+---
+
+
+### **Report**
+
+Path: `/walmart/v2/report`
+
+| Methods   | v1         | v2                       | Changed          | Endpoint         | Json(In/Out)     |
+|-----------|------------|--------------------------|:----------------:|:----------------:|:----------------:|
+| `POST`    | ~          | /adgroup                 | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /adgroup                 | :material-close: | :material-close: | :material-close: |

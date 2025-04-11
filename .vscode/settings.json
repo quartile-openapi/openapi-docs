@@ -1,0 +1,19 @@
+{
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "-l 89"
+    ],
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "python.envFile": "${workspaceFolder}/docs/tutorial/python/tokens/.env",
+    "python.analysis.completeFunctionParens": true,
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            89
+        ],
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+}

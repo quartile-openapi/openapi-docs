@@ -12,6 +12,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install poetry
+      - run: poetry self add poetry-plugin-export
       - run: python -m poetry export -f requirements.txt --output requirements.txt --without-hashes 
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force

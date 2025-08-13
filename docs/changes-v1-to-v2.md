@@ -175,6 +175,17 @@ Path: `/amazon/{version}/unmanaged`
 
 ---
 
+### **Report**
+
+Path: `/amazon/v2/report`
+
+| Methods   | v1         | v2                           | Changed          | Endpoint         | Json(In/Out)     |
+|-----------|------------|------------------------------|:----------------:|:----------------:|:----------------:|
+| `POST`    | ~          | /keyword_branded_competitor  | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /dowload/{id}                | :material-close: | :material-close: | :material-close: |
+
+
+---
 
 
 ## **Walmart API**

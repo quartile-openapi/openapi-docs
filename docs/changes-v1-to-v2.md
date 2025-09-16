@@ -203,3 +203,5 @@ Path: `/walmart/v2/report`
 |-----------|------------|--------------------------|:----------------:|:----------------:|:----------------:|
 | `POST`    | ~          | /adgroup                 | :material-close: | :material-close: | :material-close: |
 | `GET`     | ~          | /adgroup                 | :material-close: | :material-close: | :material-close: |
+| `POST`    | ~          | /aditem                  | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /aditem                  | :material-close: | :material-close: | :material-close: |

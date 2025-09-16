@@ -1,0 +1,2 @@
+pysqlx-engine==0.2.19
+httpx==0.24.0

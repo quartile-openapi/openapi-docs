@@ -205,3 +205,20 @@ Path: `/walmart/v2/report`
 | `GET`     | ~          | /adgroup                 | :material-close: | :material-close: | :material-close: |
 | `POST`    | ~          | /aditem                  | :material-close: | :material-close: | :material-close: |
 | `GET`     | ~          | /aditem                  | :material-close: | :material-close: | :material-close: |
+
+## **DSP API**
+
+The DSP API was released in the Quartile openapi v2.
+
+---
+
+### **Report**
+
+Path: `/dsp/v2/report`
+
+| Methods   | v1         | v2                       | Changed          | Endpoint         | Json(In/Out)     |
+|-----------|------------|--------------------------|:----------------:|:----------------:|:----------------:|
+| `POST`    | ~          | /geo                     | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /geo                     | :material-close: | :material-close: | :material-close: |
+| `POST`    | ~          | /inventory               | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /inventory               | :material-close: | :material-close: | :material-close: |

@@ -183,6 +183,8 @@ Path: `/amazon/v2/report`
 |-----------|------------|------------------------------|:----------------:|:----------------:|:----------------:|
 | `POST`    | ~          | /keyword_branded_competitor  | :material-close: | :material-close: | :material-close: |
 | `GET`     | ~          | /dowload/{id}                | :material-close: | :material-close: | :material-close: |
+| `POST`    | ~          | /product_metrics             | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /product_metrics/{id}        | :material-close: | :material-close: | :material-close: |
 
 
 ---
@@ -219,6 +221,6 @@ Path: `/dsp/v2/report`
 | Methods   | v1         | v2                       | Changed          | Endpoint         | Json(In/Out)     |
 |-----------|------------|--------------------------|:----------------:|:----------------:|:----------------:|
 | `POST`    | ~          | /geo                     | :material-close: | :material-close: | :material-close: |
-| `GET`     | ~          | /geo                     | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /geo/{id}                | :material-close: | :material-close: | :material-close: |
 | `POST`    | ~          | /inventory               | :material-close: | :material-close: | :material-close: |
-| `GET`     | ~          | /inventory               | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /inventory/{id}          | :material-close: | :material-close: | :material-close: |

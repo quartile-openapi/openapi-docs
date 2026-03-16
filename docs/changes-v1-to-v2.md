@@ -224,3 +224,5 @@ Path: `/dsp/v2/report`
 | `GET`     | ~          | /geo/{id}                | :material-close: | :material-close: | :material-close: |
 | `POST`    | ~          | /inventory               | :material-close: | :material-close: | :material-close: |
 | `GET`     | ~          | /inventory/{id}          | :material-close: | :material-close: | :material-close: |
+| `POST`    | ~          | /advertiser_metrics      | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /advertiser_metrics/{id} | :material-close: | :material-close: | :material-close: |

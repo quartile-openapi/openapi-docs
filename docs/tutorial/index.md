@@ -48,3 +48,23 @@ The authorization token is used to validate your identity in Quartile LLC, this 
     Authorization: Bearer <your_authorization_token>
     Subscription-Key: xyxysc98eud840afecc241f7ru3jnxyz
     ```
+
+### **Authorization (OAuth3)**
+The authorization token is used to validate your identity in Quartile LLC, this token is required to access our API.
+
+!!! Note "Authorization Token"
+    The authorization token is required to access our API.
+    
+    P.S: An authorization code is an alphanumeric password that authorizes your user to search, change, delete, or enter information into a security-protected API.
+
+    The Authorization Token is sent in the request header.
+
+    For example:
+
+    ```http
+    GET /amazon/v3/ HTTP/1.1
+    Host: api.quartile.com
+    Content-Type: application/json
+    Authorization: Bearer <your_authorization_token>
+    Subscription-Key: xyxysc98eud840afecc241f7ru3jnxyz
+    ```

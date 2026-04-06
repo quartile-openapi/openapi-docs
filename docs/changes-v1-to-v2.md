@@ -185,6 +185,8 @@ Path: `/amazon/v2/report`
 | `GET`     | ~          | /dowload/{id}                | :material-close: | :material-close: | :material-close: |
 | `POST`    | ~          | /product_metrics             | :material-close: | :material-close: | :material-close: |
 | `GET`     | ~          | /product_metrics/{id}        | :material-close: | :material-close: | :material-close: |
+| `POST`    | ~          | /advertiser_metrics          | :material-close: | :material-close: | :material-close: |
+| `GET`     | ~          | /advertiser_metrics/{id}     | :material-close: | :material-close: | :material-close: |
 
 
 ---

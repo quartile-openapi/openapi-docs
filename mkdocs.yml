@@ -3,7 +3,7 @@ site_description: Open API Quartile
 site_url: "https://developer.quartile.com"
 theme:
   name: material
-  #custom_dir: overrides
+  custom_dir: overrides
   font:
     code: Roboto Mono
   palette:
